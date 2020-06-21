@@ -60,7 +60,7 @@ See [jsmnbom/ao3-enhancements](https://github.com/jsmnbom/ao3-enhancements) <sup
 
 ### Configuration
 
-\*\*Make sure you're using [inert-entry-webpack-plugin][inert], otherwise webpack will try to output manifest.json as a javascript file, and that will obviously fail!
+**Make sure you're using [inert-entry-webpack-plugin][inert], otherwise webpack will try to output manifest.json as a javascript file, and that will obviously fail!**
 
 #### webpack.config.js (configuration)
 
@@ -111,7 +111,7 @@ module.exports = {
 
 Now you'll be able to specify vendors in your manifest.json keys and to import files.
 
-```javascriptonc
+```jsonc
 {
   "manifest_version": 2,
   "version": "",
@@ -155,7 +155,7 @@ And because we are using [html-loader][html] which can also resolve imports in `
 
 ### manifest.json (output)
 
-```javascripton
+```jsonc
 {
   "manifest_version": 2,
   "version": "0.3.0",
@@ -190,12 +190,13 @@ And because we are using [html-loader][html] which can also resolve imports in `
 
 All properties can use the target vendor feature, but only some properties will be resolved by webpack. These are currently: (if you need more please open an issue or PR)
 
-Please see the [src/interfaces.ts -> Manifest]() interface for these currently supported properties.
+Please see the [src/interfaces.ts -> Manifest](https://github.com/jsmnbom/webextension-manifest-loader/blob/main/src/interfaces.ts#L5) interface for these currently supported properties.
 
 ### Are there any known limitation or problems?
 
 - Does not resolve imports in localizable property values (ones starting with \_\_MSG\_).
 - Does not work with webpack's \[hash\], this should be okay as it's not really needed for webextensions.
+- Webpack doesn't display progress for child compilers (like spawn-loader) correctly.
 
 ## Related and thanks
 
