@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "ES2019", // = node 12 (we need Object.fromEntries)
+    "module": "commonjs",
+    "strict": true,
+    "alwaysStrict": true,
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "declaration": true,
+    "declarationMap": true,
+    "allowJs": true,
+    "baseUrl": ".",
+    "lib": [
+      "ES2019"
+    ],
+    "outDir": "lib",
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.js"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
+}

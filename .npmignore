@@ -1,0 +1,7 @@
+.vscode
+src
+.eslintrc.js
+.eslintignore
+.prettierrc
+*.map
+node_modules/

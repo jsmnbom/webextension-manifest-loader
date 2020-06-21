@@ -1,0 +1,21 @@
+{
+  "editor.tabSize": 2,
+  "markdownlint.config": {
+    "default": true,
+    "no-inline-html": {
+      "allowed_elements": [
+        "sup"
+      ]
+    },
+    "fenced-code-language": false,
+    "no-trailing-punctuation": false
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "eslint.validate": [
+    "javascript",
+    "typescript",
+  ],
+  "editor.formatOnSave": true
+}

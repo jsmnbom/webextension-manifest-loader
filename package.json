@@ -1,0 +1,59 @@
+{
+  "name": "webextension-manifest-loader",
+  "version": "0.1.0",
+  "description": "Webextension manifest.json loader.",
+  "scripts": {
+    "build": "rm -rf lib && tsc",
+    "watch": "rm -rf lib && tsc --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "author": "Jasmin Bom",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "types": "lib",
+  "files": [
+    "lib"
+  ],
+  "dependencies": {
+    "deepcopy": "^2.0.0",
+    "deepmerge": "^4.2.2",
+    "loader-utils": "^2.0.0",
+    "schema-utils": "^2.7.0",
+    "strip-json-comments": "^3.1.0"
+  },
+  "devDependencies": {
+    "@types/loader-utils": "^2.0.1",
+    "@types/node": "^14.0.13",
+    "@types/webpack": "^4.41.17",
+    "@typescript-eslint/eslint-plugin": "^3.3.0",
+    "@typescript-eslint/parser": "^3.3.0",
+    "eslint": "^7.3.0",
+    "eslint-config-import": "^0.13.0",
+    "eslint-config-prettier": "^6.11.0",
+    "prettier": "^2.0.5",
+    "typescript": "^3.9.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jsmnbom/webextension-manifest-loader.git"
+  },
+  "keywords": [
+    "webextension",
+    "addon",
+    "manifest",
+    "manifest.json",
+    "chrome",
+    "firefox",
+    "edge",
+    "opera",
+    "webpack",
+    "loader"
+  ],
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/jsmnbom/webextension-manifest-loader/issues"
+  },
+  "homepage": "https://github.com/jsmnbom/webextension-manifest-loader"
+}
