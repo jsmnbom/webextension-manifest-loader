@@ -10,6 +10,7 @@
     "fenced-code-language": false,
     "no-trailing-punctuation": false
   },
+  "markdown.extension.toc.slugifyMode": "github",
   "editor.codeActionsOnSave": {
     "source.fixAll": true
   },

@@ -1,8 +1,28 @@
-# webextension-manifest-loader
+# webextension-manifest-loader <!-- omit in toc -->
+
+[![npm version](https://img.shields.io/npm/v/webextension-manifest-loader.svg)](https://www.npmjs.com/package/webextension-manifest-loader)
+[![node version](https://img.shields.io/node/v/webextension-manifest-loader.svg)](https://www.npmjs.com/package/webextension-manifest-loader)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 Webpack loader that loads browser tailored manifest.json. It also imports all importable properties, allowing you to have 'manifest.json' as your only webpack entry point.
 
 **Use it together with [inert-entry-webpack-plugin][inert], [spawn-loader][spawn], and maybe [html-loader][html], more info below.**
+
+## Table of Contents <!-- omit in toc -->
+
+- [Getting Started](#getting-started)
+  - [webpack.config.js](#webpackconfigjs)
+- [Options](#options)
+- [Example](#example)
+  - [Configuration](#configuration)
+    - [webpack.config.js (configuration)](#webpackconfigjs-configuration)
+    - [manifest.json (configuration)](#manifestjson-configuration)
+  - [Output if targetVendor == 'chrome'](#output-if-targetvendor--chrome)
+  - [manifest.json (output)](#manifestjson-output)
+- [FAQ](#faq)
+  - [Which properties does it currently support?](#which-properties-does-it-currently-support)
+  - [Are there any known limitation or problems?](#are-there-any-known-limitation-or-problems)
+- [Related and thanks](#related-and-thanks)
 
 ## Getting Started
 
