@@ -12,7 +12,8 @@
   "main": "lib/index.js",
   "types": "lib",
   "files": [
-    "lib"
+    "lib/**/*.js",
+    "lib/**/*.d.ts"
   ],
   "dependencies": {
     "deepcopy": "^2.0.0",
