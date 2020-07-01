@@ -1,6 +1,6 @@
 {
   "name": "webextension-manifest-loader",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Webextension manifest.json loader.",
   "scripts": {
     "build": "rm -rf lib && tsc",
