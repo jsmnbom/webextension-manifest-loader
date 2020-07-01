@@ -32,9 +32,12 @@ const optionsSchema = {
 function loader(this: webpack.loader.LoaderContext, source: string) {
   const done = this.async() as webpack.loader.loaderCallback;
 
-  const options = ((getOptions(this) || {
-    merge: {} as Manifest,
-  }) as unknown) as LoaderOptions;
+  const options = (Object.assign(
+    {
+      merge: {} as Manifest,
+    },
+    getOptions(this)
+  ) as unknown) as LoaderOptions;
 
   validateOptions(optionsSchema as Schema, options, {
     name: 'Webextension Manifest Loader',
@@ -134,8 +137,9 @@ const sourceExtract = (manifest: Manifest, messages: Message[]) => {
     // Default icon
     if (manifest.browser_action.default_icon) {
       if (typeof manifest.browser_action.default_icon === 'string') {
-        manifest.browser_action.default_icon ==
-          extract(manifest.browser_action.default_icon);
+        manifest.browser_action.default_icon = extract(
+          manifest.browser_action.default_icon
+        );
       } else {
         manifest.browser_action.default_icon = objectMap(
           manifest.browser_action.default_icon,
@@ -166,8 +170,9 @@ const sourceExtract = (manifest: Manifest, messages: Message[]) => {
     // Default icon
     if (manifest.page_action.default_icon) {
       if (typeof manifest.page_action.default_icon === 'string') {
-        manifest.page_action.default_icon ==
-          extract(manifest.page_action.default_icon);
+        manifest.page_action.default_icon = extract(
+          manifest.page_action.default_icon
+        );
       } else {
         manifest.page_action.default_icon = objectMap(
           manifest.page_action.default_icon,
